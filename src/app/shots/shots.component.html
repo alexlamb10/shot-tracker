@@ -1,6 +1,6 @@
-<div class="container" style="width: 50%;">
+<div class="container player1" >
     <h4>Player 1</h4>
-    <form #form="ngForm">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
 
       <div class="form-group" ngNativeValidate>
         <label for="name">Name</label>
@@ -9,58 +9,66 @@
        </select>
       </div>
 
-      <div class="form-check form-group">
-        <input class="form-check-input" type="checkbox"
-                id="homeTraining" name="homeTraining">
+      <div class="form-check form-group" stu>
         <label class="form-check-label" for="homeTraining" >
           At home Training
         </label>
+        <input class="form-check-input" type="checkbox"
+                id="homeTraining" name="homeTraining">
       </div>
 
-      <div class="form-group">
+      <div class="form-group center">
         <h5 class="shot-type">Free Throws</h5>
-        <label for="ftMakes">
-            Makes
-        </label>
-        <input type="number" max="10" min="0" id="ftMakes" name="ftMakes" required [(ngModel)]="stats.ftMakes" #ftMakes="ngModel" [class.field-error]="form.submitted && ftMakes.invalid">
-        
-        <label for="ftMiss">
-            Misses
-        </label>
-        <input type="number" max="10" min="0" id="ftMiss" name="ftMiss" required [(ngModel)]="stats.ftMisses" #ftMisses="ngModel" [class.field-error]="form.submitted && ftMisses.invalid">
+        <div class="scores">
+          <label for="ftMakes">
+              Makes
+          </label>
+          <input type="number" max="10" min="0" id="ftMakes" name="ftMakes" required [(ngModel)]="stats.ftMakes" #ftMakes="ngModel" [class.field-error]="form.submitted && ftMakes.invalid">
+          
+          <label for="ftMiss">
+              Misses
+          </label>
+          <input type="number" max="10" min="0" id="ftMiss" name="ftMiss" required [(ngModel)]="stats.ftMisses" #ftMisses="ngModel" [class.field-error]="form.submitted && ftMisses.invalid">
+        </div>
         
         <h5 class="shot-type">Spot-up</h5>
-        <label for="sMakes">
-            Makes
-        </label>
-        <input type="number" min="0" id="sMakes" name="sMakes" required [(ngModel)]="stats.spotMakes" #spotMakes="ngModel" [class.field-error]="form.submitted && spotMakes.invalid">
-        
-        <label for="sMiss">
-            Misses
-        </label>
-        <input type="number" min="0" id="sMiss" name="sMiss" required [(ngModel)]="stats.spotMisses" #spotMisses="ngModel" [class.field-error]="form.submitted && spotMisses.invalid">
+        <div class="scores">
+          <label for="sMakes">
+              Makes
+          </label>
+          <input type="number" min="0" id="sMakes" name="sMakes" required [(ngModel)]="stats.spotMakes" #spotMakes="ngModel" [class.field-error]="form.submitted && spotMakes.invalid">
+          
+          <label for="sMiss">
+              Misses
+          </label>
+          <input type="number" min="0" id="sMiss" name="sMiss" required [(ngModel)]="stats.spotMisses" #spotMisses="ngModel" [class.field-error]="form.submitted && spotMisses.invalid">
+        </div>
 
         <h5 class="shot-type">Mid-range</h5>
-        <label for="mMakes">
-            Makes
-        </label>
-        <input type="number" min="0" id="mMakes" name="mMakes" required [(ngModel)]="stats.midMakes" #midMakes="ngModel" [class.field-error]="form.submitted && midMakes.invalid">
-        
-        <label for="mMiss">
-            Misses
-        </label>
-        <input type="number" min="0" id="mMiss" name="mMiss" required [(ngModel)]="stats.midMisses" #midMisses="ngModel" [class.field-error]="form.submitted && midMisses.invalid">
+        <div class="scores">
+          <label for="mMakes">
+              Makes
+          </label>
+          <input type="number" min="0" id="mMakes" name="mMakes" required [(ngModel)]="stats.midMakes" #midMakes="ngModel" [class.field-error]="form.submitted && midMakes.invalid">
+          
+          <label for="mMiss">
+              Misses
+          </label>
+          <input type="number" min="0" id="mMiss" name="mMiss" required [(ngModel)]="stats.midMisses" #midMisses="ngModel" [class.field-error]="form.submitted && midMisses.invalid">
+        </div>
 
         <h5 class="shot-type">Three point</h5>
-        <label for="tMakes">
-            Makes
-        </label>
-        <input type="number" min="0" id="tMakes" name="tMakes" required [(ngModel)]="stats.threeMakes" #threeMakes="ngModel" [class.field-error]="form.submitted && threeMakes.invalid">
-        
-        <label for="tMiss">
-            Misses
-        </label>
-        <input type="number" min="0" id="tMiss" name="tMiss" required [(ngModel)]="stats.threeMisses" #threeMisses="ngModel" [class.field-error]="form.submitted && threeMisses.invalid">
+        <div class="scores">
+          <label for="tMakes">
+              Makes
+          </label>
+          <input type="number" min="0" id="tMakes" name="tMakes" required [(ngModel)]="stats.threeMakes" #threeMakes="ngModel" [class.field-error]="form.submitted && threeMakes.invalid">
+          
+          <label for="tMiss">
+              Misses
+          </label>
+          <input type="number" min="0" id="tMiss" name="tMiss" required [(ngModel)]="stats.threeMisses" #threeMisses="ngModel" [class.field-error]="form.submitted && threeMisses.invalid">
+        </div>
 
       </div>
 
@@ -73,7 +81,7 @@
       </div>
 
       <div class="form-group">
-        <label for="notes" >Notes</label>
+        <label for="notes" >Weekly Pointers:</label>
         <textarea id="notes" name="notes" class="form-control" 
                   rows="3"  ></textarea>
       </div>      

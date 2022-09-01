@@ -36,7 +36,7 @@ export class ShotsComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    console.log('in onSubmit' + form.valid);
+    console.log('in onSubmit ' + form.valid);
     
   }
 
