@@ -1,60 +1,21 @@
-<div class="container player1" >
-    <form [formGroup]="form">
-      FT Makes <input type="number" formControlName="ftMakes" > 
-      FT Misses <input type="number" formControlName="ftMisses" > 
-      FT percentage: {{ (formTotal$ | async).percentage | number:'1.2-2' }}%
-      Spot-up Makes <input type="number" formControlName="spotMakes" > 
-      Spot-up Misses <input type="number" formControlName="spotMisses" > 
-      Spot-up percentage: {{ (formTotal$ | async).spotPercentage | number:'1.2-2' }}%
-      Mid-range Makes <input type="number" formControlName="midMakes" > 
-      Mid-range Misses <input type="number" formControlName="midMisses" > 
-      Mid-range percentage: {{ (formTotal$ | async).midPercentage | number:'1.2-2' }}%
-      Three-Point Makes <input type="number" formControlName="threeMakes" > 
-      Three-Point Misses <input type="number" formControlName="threeMisses" > 
-      Three-Point percentage: {{ (formTotal$ | async).threePercentage | number:'1.2-2' }}%
+<div class="center container player" >
+    <form [formGroup]="form" class="center">
+      <h4>FT</h4>
+      Makes <input type="number" formControlName="ftMakes" > 
+      Misses <input type="number" formControlName="ftMisses" > 
+      Percentage: {{ (formTotal$ | async).percentage | number:'1.2-2' }}%
+      <h4>Spot up</h4>
+      Makes <input type="number" formControlName="spotMakes" > 
+      Misses <input type="number" formControlName="spotMisses" > 
+      Percentage: {{ (formTotal$ | async).spotPercentage | number:'1.2-2' }}%
+      <h4>Mid-range</h4>
+      Makes <input type="number" formControlName="midMakes" > 
+      Misses <input type="number" formControlName="midMisses" > 
+      Percentage: {{ (formTotal$ | async).midPercentage | number:'1.2-2' }}%
+      <h4>3 point</h4>
+      Makes <input type="number" formControlName="threeMakes" > 
+      Misses <input type="number" formControlName="threeMisses" > 
+      Percentage: {{ (formTotal$ | async).threePercentage | number:'1.2-2' }}%
     </form>
   </div>
 ›
-
-  <!-- <h2>Select a continent:</h2>
-
-<select [formControl]="continentSelect">
-  <option>Antarctica</option>
-  <option>Africa</option>
-  <option>Asia</option>
-  <option>Europe</option>
-  <option>North America</option>
-  <option>South America</option>
-  <option>Oceania</option>
-</select>
-
-<p>
-  You selected: {{currentSelection}}
-</p>
-
-
-<input type="number" [formControl]="numberSelect" >
-<input type="number" [formControl]="numberSelect2" >
-
-
-{{currentNumber}}
-{{currentNumber2}}
-{{addedNum}} 
-
-Total: {{ combined$ | async }}
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-<form [formGroup]="form">
-  FT Makes<input type="number" formControlName="ftMakes" ><br />
-  FT Misses<input type="number" formControlName="ftMisses" >
-</form>
-
-<ng-container *ngIf="formTotal$ | async as total">
-  FT percentage: {{ total.percentage | number:'1.2-2' }}%
-  Form valid: {{ form.valid }}
-</ng-container>  -->
