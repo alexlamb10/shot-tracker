@@ -1,21 +1,23 @@
 <div class="center container player" >
     <form [formGroup]="form" class="center">
       <h4>FT</h4>
-      Makes <input type="number" formControlName="ftMakes" > 
-      Misses <input type="number" formControlName="ftMisses" > 
+      Makes <input class="scores" type="number" formControlName="ftMakes" > 
+      Misses <input class="scores" type="number" formControlName="ftMisses" > 
       Percentage: {{ (formTotal$ | async).percentage | number:'1.2-2' }}%
       <h4>Spot up</h4>
-      Makes <input type="number" formControlName="spotMakes" > 
-      Misses <input type="number" formControlName="spotMisses" > 
+      Makes <input class="scores" type="number" formControlName="spotMakes" > 
+      Misses <input class="scores" type="number" formControlName="spotMisses" > 
       Percentage: {{ (formTotal$ | async).spotPercentage | number:'1.2-2' }}%
       <h4>Mid-range</h4>
-      Makes <input type="number" formControlName="midMakes" > 
-      Misses <input type="number" formControlName="midMisses" > 
+      Makes <input class="scores" type="number" formControlName="midMakes" > 
+      Misses <input class="scores" type="number" formControlName="midMisses" > 
       Percentage: {{ (formTotal$ | async).midPercentage | number:'1.2-2' }}%
       <h4>3 point</h4>
-      Makes <input type="number" formControlName="threeMakes" > 
-      Misses <input type="number" formControlName="threeMisses" > 
+      Makes <input class="scores" type="number" formControlName="threeMakes" > 
+      Misses <input class="scores" type="number" formControlName="threeMisses" > 
       Percentage: {{ (formTotal$ | async).threePercentage | number:'1.2-2' }}%
+
+      <button>Submit</button>
     </form>
   </div>
 ›

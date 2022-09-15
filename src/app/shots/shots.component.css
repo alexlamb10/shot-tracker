@@ -20,14 +20,21 @@
     flex-direction: column;
 }
 
-.scores input {
-    width: 20%;
+.scores {
+    width: 100%;
 }
 
-.scores {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 60%;
-    margin-bottom: 2vh;
+
+button {
+    border: none;
+    color: black;
+    background-color: dodgerblue;
+    transition: .3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(.9);
+    background-color: rgb(48, 46, 46);
+    color: dodgerblue;
+    border-radius: 5px;
 }
