@@ -20,8 +20,7 @@ export class ShotsComponent implements OnInit {
     threeMakes: [0, [Validators.required, Validators.min(0)]],
     threeMisses: [0, [Validators.required, Validators.min(0)]],
     finisher: [0, [Validators.required, Validators.min(0)]],
-    hustlePoints: [0, [Validators.min(0)]],
-    name: ["Select Player", [Validators.required]]
+    hustlePoints: [0, [Validators.min(0)]]
   });
 
   formTotal$: Observable<any> = this.form.valueChanges.pipe(
@@ -33,7 +32,6 @@ export class ShotsComponent implements OnInit {
       const totalMidShots = formValue.midMakes + formValue.midMisses;
       const totalThreeShots = formValue.threeMakes + formValue.threeMisses;
     return {
-      name: formValue.names,
       ftMakes: formValue.ftMakes,
       ftMisses: formValue.ftMisses,
       percentage: totalFtShots > 0 ? 100 *(formValue.ftMakes / totalFtShots) : 0,
