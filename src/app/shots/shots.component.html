@@ -1,5 +1,10 @@
 <div class="center container player" >
     <form [formGroup]="form" class="center">
+      Name: {{(formTotal$ | async).name}}
+      <select formControlName="names">
+        <option value="default"></option>
+        <option *ngFor="let player of players" [value]="player.name">{{player.name}}</option>
+      </select>
       <h4>FT</h4>
       Makes <input class="scores" type="number" formControlName="ftMakes" > 
       Misses <input class="scores" type="number" formControlName="ftMisses" > 
